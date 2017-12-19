@@ -251,6 +251,10 @@ hr {
     .paragraf {
         width: 90%;
     }
+
+        .copirate {
+            letter-spacing: 0.05em;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -265,6 +269,12 @@ hr {
     .paragraf__text {
         line-height: 25px;
     }
+}
+
+#parallax-bg1 {
+    z-index: 1;
+    position: fixed;
+    top: 0;
 }
 
 #parallax-bg3 {
