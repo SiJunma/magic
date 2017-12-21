@@ -13,18 +13,74 @@
     <div class="line">
         <div class="content">
             <span class="logo">The magic lights</span>
-            <div class="audio">
+            <div class="music">
+                                <div id="music_btn">
+                                    <div id="pause" class="music-icon pause"><img src="img/pause.svg" alt="Play"></div>
+                                    <div id="play" class="music-icon play"><img src="img/play.svg" alt="Pause"></div>
+                                </div>
+                                <span class="music-title">- Those Who Inhale the Dew</span>
+                                <img class="music-note" src="img/note.svg" alt="">
+                                <audio id="audio" loop autoplay>
+                                    <source src="Tsuyu_wo_Suu_Mure_Those_Who_Inhale_the_Dew.ogg" type="audio/ogg; codecs=vorbis">
+                                    <source src="Tsuyu_wo_Suu_Mure_Those_Who_Inhale_the_Dew.mp3" type="audio/mp3">
+                                    Тег audio не поддерживается вашим браузером.
+                                </audio>
+                                <script>                              
+                                    document.getElementById("music_btn").onclick = function()
+                                    {
+                                      $("#audio")[0].volume = 0.1;
+                                      var audio = document.getElementById("audio");                               
+                                      if(audio.paused == true)
+                                      {
+                                        document.getElementById("audio").play();                                    
+                                        $('#pause').fadeIn(); 
+                                        $('#play').fadeOut();                                   
+                                      }
+                                      else if (audio.paused == false)
+                                      {
+                                        document.getElementById("audio").pause();                                   
+                                        $('#play').fadeIn(); 
+                                        $('#pause').fadeOut();                                 
+                                      }
+                                    }
+                                </script>
+                            </div>
+<!--             <div class="audio">
                 <div class="control">
-                    <img src="img/play.svg" alt="Play">
+                    <div id="music_btn">
+                         <a id="play"  alt="Pause"><img src="img/play.svg"></a>
+                    <img src="img/play.svg" alt="Play" id="pause">
+                    </div>
+                   
                     <span>- Those Who Inhale the Dew</span>
                     <img src="img/note.svg" alt="">
                 </div>
-                <audio autoplay>
+                <audio autoplay id="audio" loop>
                 <source src="Tsuyu_wo_Suu_Mure_Those_Who_Inhale_the_Dew.ogg" type="audio/ogg; codecs=vorbis">
                 <source src="Tsuyu_wo_Suu_Mure_Those_Who_Inhale_the_Dew.mp3" type="audio/mpeg">
                  Тег audio не поддерживается вашим браузером. 
                 </audio>
-            </div>
+                <script>
+                                           document.getElementById("#music_btn").onclick = function()
+                                    {
+                                      $("#audio")[0].volume = 0.1;
+                                      var audio = document.getElementById("audio");                               
+                                      if(audio.paused == true)
+                                      {
+                                        document.getElementById("audio").play();                                    
+                                        $('#pause').fadeIn(); 
+                                        $('#play').fadeOut();                                   
+                                      }
+                                      else if (audio.paused == false)
+                                      {
+                                        document.getElementById("audio").pause();                                   
+                                        $('#play').fadeIn(); 
+                                        $('#pause').fadeOut();                                 
+                                      }
+                                    }
+                                
+                </script>
+            </div> -->
         </div>
         
     </div>
