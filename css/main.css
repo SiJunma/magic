@@ -203,7 +203,12 @@ hr {
     top: 6150px;
 }
 
-.audio {
+#music_btn {
+  cursor: pointer;
+  position: relative;
+}
+
+.music {
     float: right;
     display: inline;
     line-height: 63px;
@@ -215,16 +220,23 @@ hr {
     font-weight: normal;
 }
 
-.audio img {
-        vertical-align: middle;
+.music-icon {
+  position: absolute;
+  display: inline;
+  left: -35px;
+  top: 5px;
 }
 
-.audio img:first-child {
-    margin-right: 8px;
+.pause {
+  display: inline;
 }
 
-.audio span {
-     margin-right: 5px;   
+.play {
+  display: none;
+}
+
+.music-note {
+  margin-right: 5px;   
 }
 
 @media screen and (max-width: 1250px) {
@@ -309,3 +321,4 @@ hr {
     position: absolute;
     top: 900px;
 }
+
